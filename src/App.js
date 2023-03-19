@@ -6,7 +6,7 @@ function App() {
   const [data,setData] = useState('')
   fetch('https://deploy-node-e4sv.onrender.com/api')
   .then(res => res.json())
-  .then(dataRes => setData(dataRes))
+  .then(dataRes => setData(dataRes.message))
   .catch(err => console.log(err))
 
   return (
